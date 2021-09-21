@@ -91,5 +91,10 @@ async def main(user_id):
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(3808385))
+    if sys.version_info >= (3, 7):
+        # Python 3.7+
+        asyncio.get_event_loop().run_until_complete(main(1012012))
+    else:
+        # Python 3.6
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(main(1012012))
