@@ -19,7 +19,7 @@ async def main():
     player_table.field_names = ["Player", "£", "G", "A", "G + A"]
     player_table.align["Player"] = "l"
 
-    for player in top_performers[:10]:
+    for player in top_performers[:20]:
         goals = player.goals_scored
         assists = player.assists
         player_table.add_row(
