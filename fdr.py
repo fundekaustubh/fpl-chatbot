@@ -43,4 +43,11 @@ async def main():
     print(fdr_table)
 
 
-asyncio.get_event_loop().run_until_complete(main())
+if __name__ == "__main__":
+    if sys.version_info >= (3, 7):
+        # Python 3.7+
+        asyncio.get_event_loop().run_until_complete(main())
+    else:
+        # Python 3.6
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(main())
