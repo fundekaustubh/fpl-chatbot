@@ -1,5 +1,6 @@
 import asyncio
 import aiohttp
+import sys
 from colorama import Fore, init
 from prettytable import PrettyTable
 
